@@ -2,6 +2,8 @@ const gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     notify = require('gulp-notify'),
     sass = require('gulp-sass'),
+    cssnano = require('gulp-cssnano'),
+    terser = require('gulp-terser'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync');
 
@@ -19,11 +21,13 @@ gulp.task('sass', function() {
       .pipe(autoprefixer({
          browsers: ['last 2 versions']
       }))
+      .pipe(cssnano())
       .pipe(gulp.dest('./build/css'))
 });
 
 gulp.task('scripts', function(){
     gulp.src('./js/*.js')
+      .pipe(terser())
       .pipe(gulp.dest('./build/js'))
 });
 
@@ -41,4 +45,4 @@ gulp.task('watch', function(){
    gulp.watch('js/*.js', gulp.series('scripts'));
 });
 
-gulp.task('default', gulp.parallel('watch', 'browser-sync'));
+gulp.task('default', gulp.parallel('sass','scripts','watch', 'browser-sync'));
