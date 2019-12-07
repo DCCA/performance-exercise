@@ -10,13 +10,14 @@
       <link rel="stylesheet" href="build/css/style.css" />
 
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
       <script type="text/javascript" src="./build/js/vendor/moment.js"></script>
       <script type="text/javascript" src="./build/js/main.js"></script>
    </head>
    <body>
       <div class="site">
          <header class="site-header">
-            <img src="./build/images/etts_logo.svg" alt="Eyes to the Skys Logo" class="logo" />
+            <img src="./build/images/etts_logo.svg" alt="Eyes to the Skys Logo" class="logo lazyload" />
             <h1>Eyes to the Sky</h1>
             <p>This Week in Near-Earth Objects</p>
          </header>
@@ -25,7 +26,7 @@
             <div class="container">
                <h2>Neos in the Neighbourhood</h2>
                <p class="intro">We don&#39;t want to go the way of the dinosaurs, so let&#39;s keep our eyes on the sky! The following is a list of Neos will be passing by Earth over the next week:</p>
-               <img src="./build/images/ajax-loader.gif" alt="Loading..." class="ajax-loader" />
+               <img src="./build/images/ajax-loader.gif" alt="Loading..." class="ajax-loader lazyload" />
                <div class="neos-list"></div>
             </div>
          </section>
@@ -34,19 +35,19 @@
             <div class="container">
                <div class="action-list">
                   <div class="action">
-                     <img src="./build/images/asteroid.svg" alt="Asteroid icon" class="cta-icon" />
+                     <img src="./build/images/asteroid.svg" alt="Asteroid icon" class="cta-icon lazyload" />
                      <h2>New to Neos?</h2>
                      <p>Near-Earth Objects (Neos) are comets and asteroids that have been nudged by the gravitational attraction of nearby planets into orbits that allow them to enter the Earth&#39;s neighborhood.</p>
                      <p><a href="https://en.wikipedia.org/wiki/Near-Earth_object">Learn More About Neos &rarr;</a></p>
                   </div>
                   <div class="action">
-                     <img src="./build/images/helmet.svg" alt="Helmet icon" class="cta-icon" />
+                     <img src="./build/images/helmet.svg" alt="Helmet icon" class="cta-icon lazyload" />
                      <h2>Latest News</h2>
                      <p>Stay informed on what&#39;s going on in the skys overhead. Get the latest near-earth object news from Nasa's Jet Propulsion Labratory blog.</p>
                      <p><a href="http://www.jpl.nasa.gov/asteroidwatch/">Visit the JPL Blog &rarr;</a></p>
                   </div>
                   <div class="action">
-                     <img src="./build/images/satellite.svg" alt="Satellite icon" class="cta-icon" />
+                     <img src="./build/images/satellite.svg" alt="Satellite icon" class="cta-icon lazyload" />
                      <h2>Asteroid Tweets</h2>
                      <a class="twitter-timeline" href="https://twitter.com/AsteroidWatch" data-tweet-limit="1" data-chrome="noheader nofooter">Tweets by AsteroidWatch</a> <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                   </div>
@@ -57,18 +58,18 @@
          <footer class="site-footer">
             <div class="site-info container">
                <div class="copyright">
-                  <img src="./build/images/red_logo_knockout.svg" alt="RED Academy logo" class="footer-logo" />
+                  <img src="./build/images/red_logo_knockout.svg" alt="RED Academy logo" class="footer-logo lazyload" />
                   <p>Copyright &copy; RED Academy 2016.</p>
                   <p>Eyes to the Sky makes use of the <a href="https://api.nasa.gov/api.html#neows-feed">Neo Feed API</a> maintained by NASA.</p>
                </div>
                <div class="social-links">
                   <p>Follow Eyes to the Sky:</p>
                   <ul>
-                     <li><a href="#"><img src="./build/images/facebook.svg" alt="Facebook icon" /></a></li>
-                     <li><a href="#"><img src="./build/images/twitter.svg" alt="Twitter icon" /></a></li>
-                     <li><a href="#"><img src="./build/images/instagram.svg" alt="Instagram icon" /></a></li>
-                     <li><a href="#"><img src="./build/images/flickr.svg" alt="Flickr icon" /></a></li>
-                     <li><a href="#"><img src="./build/images/github.svg" alt="GitHub icon" /></a></li>
+                     <li><a href="#"><img src="./build/images/facebook.svg" alt="Facebook icon" class="lazyload"/></a></li>
+                     <li><a href="#"><img src="./build/images/twitter.svg" alt="Twitter icon" class="lazyload"/></a></li>
+                     <li><a href="#"><img src="./build/images/instagram.svg" alt="Instagram icon" class="lazyload"/></a></li>
+                     <li><a href="#"><img src="./build/images/flickr.svg" alt="Flickr icon" class="lazyload"/></a></li>
+                     <li><a href="#"><img src="./build/images/github.svg" alt="GitHub icon" class="lazyload"/></a></li>
                   </ul>
                </div>
             </div>
