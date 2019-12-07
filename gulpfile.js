@@ -5,6 +5,7 @@ const gulp = require('gulp'),
     cssnano = require('gulp-cssnano'),
     terser = require('gulp-terser'),
     autoprefixer = require('gulp-autoprefixer'),
+    imagemin = require('gulp-imagemin');
     browserSync = require('browser-sync');
 
     var plumberErrorHandler = {
@@ -31,6 +32,12 @@ gulp.task('scripts', function(){
       .pipe(gulp.dest('./build/js'))
 });
 
+gulp.task('img-op', function(){
+   gulp.src('./images/*')
+		.pipe(imagemin())
+		.pipe(gulp.dest('./build/images'))
+})
+
 gulp.task('browser-sync', function(){
    browserSync.init({
       server: {
@@ -45,4 +52,4 @@ gulp.task('watch', function(){
    gulp.watch('js/*.js', gulp.series('scripts'));
 });
 
-gulp.task('default', gulp.parallel('sass','scripts','watch', 'browser-sync'));
+gulp.task('default', gulp.parallel('img-op', 'sass','scripts','watch', 'browser-sync'));
