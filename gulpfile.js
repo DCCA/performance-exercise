@@ -26,7 +26,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('scripts', function(){
-    gulp.src('./js/*.js')
+    gulp.src('./js/*/*.js', './js/vendor/*.js')
       .pipe(terser())
       .pipe(gulp.dest('./build/js'))
 });
